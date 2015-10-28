@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example_7 wonders of the world</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="PLUGINS\bootstrap-3.3.2-dist/css/bootstrap.min.css">
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'  type='text/css'>
+
+
+<link rel="stylesheet" href="CSS\boot.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+
+ /*function formAlert() 
+{
+   document.getElementById('send').onclick = function()
+  
+ {
+       alert("Please check in the Information you've entered:" + '\n'  +
+           "Name :" + document.getElementById("name").value + '\n'  +
+ "PhoneNo:" + document.getElementById("phno").value + '\n'  + 
+  "Password cannot be revealed!!!!!"
++  
+"Email :" + document.getElementById("email").value );
+       return false;
+   
+}
+
+}
+
+*/
+
+
+
+
+function formAlert() 
+{
+  
+   // document.getElementById('send').onclick = function()
+ //{
+      /* alert("Please check in the Information you've entered:" + '\n'  +
+           "Name :" + document.getElementById("name").value + '\n'  +
+ "PhoneNo:" + document.getElementById("phno").value + '\n'  + 
+  "Password cannot be revealed!!!!!"
++  
+"Email :" + document.getElementById("email").value );
+       return false;*/
+   
+//}
+
+
+
+  // Check for LocalStorage
+  if (localStorage) {
+
+    // Add an event listener for form submissions
+   // document.getElementById('myModal').addEventListener('button', function() 
+	
+	
+      // Get the value of the name field.
+      var name1 = document.getElementById('name').value;
+	  
+	  console.log(name1);
+
+      // Save the name in localStorage.
+      localStorage.setItem('name', name1);
+	  
+	  var name2 = localStorage.getItem('name');
+	  
+	  alert(name2);
+	  
+    }
+
+	
+  }
+
+
+
+
+
+
+
+</script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner" style="background-color: aquamarine;">
+  <div class="container">
+
+    <div class="navbar-header">
+
+	 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar">  <span class="glyphicon glyphicon-th-large"></span> </span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand " href="#">Wonders of the World </a>
+    </div>
+
+
+<nav class="collapse navbar-collapse bs-navbar-collapse">
+     
+      <ul class="nav navbar-nav navbar-right">
+
+ <li class="active">  
+  
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="SignUp" style="margin-top: 11%; font-family:lobster;"> Sign Up</button> </li>
+
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times</button>
+                    <h4 class="modal-title">Kindly give register Yourself  here!!!</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <form role="form"  method="post" enctype="multipart/form-data" >
+                        
+                        
+                        <div class="form-group">
+                            <label>Name/Username</label>
+                             <input type="text" class="form-control" id="name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            
+                            
+                            
+        <input type="text" class="form-control bfh-phone" id="phno" data-format="+91 dddd-dddd-dd" placeholder="Enter your valid no.">
+                            
+                            
+                        </div>
+                        
+                                                <div class="form-group">
+                            <label> Password</label>
+                             <input type="password" class="form-control">
+                        </div>
+                  
+                        
+                        
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Email:</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        
+                         <div class="form-group">
+                        <input id="send_updates" type="checkbox"> <label for=
+            "send_updates">Send me occasional email updates</label>
+           </div>
+                        
+                        
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    
+                     <button type="button" class="btn btn-default" id="send" onclick="formAlert()" >submit</button>
+                    
+                    
+           
+                </div>
+            </div>
+        </div>
+    </div>
+	 
+
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+<div class="container">
+
+
+<div class="jumbotron" style="margin-right: -1%;margin-top: 1%;">
+
+
+
+
+
+<h1> The 7 wonders of the World</h1>
+
+    <h2 style="color:#000066" ;> <span class="glyphicon glyphicon-heart"> </span>  Encounter a new experience...... Unleash a new journey <span class="glyphicon glyphicon-heart"> </span> </h2> 
+
+  </div>
+
+
+
+  <div class="row">
+
+    <div class="col-sm-3  col-md-6 col-lg-4">
+
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Discover the Wonders <span class="glyphicon glyphicon-home  style="
+    padding-left: 72%;"> </span> </a></li>
+
+        <li><a href="#">Chichen Itza</a></li>
+        <li><a href="#">Christ- The Redeemer</a></li>
+        <li><a href="#">The Great Wall of China</a></li>
+        <li><a href="#">Machu Picchu</a></li>
+        <li><a href="#">Petra</a></li>
+        <li><a href="#">The Taj Mahal</a></li>
+       <li><a href="#">Colosseum</a></li>
+
+      </ul>
+
+    </div>
+
+
+
+
+    <div class="col-sm-9 col-md-6  col-lg-8" >
+
+     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+<!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
+      <li data-target="#myCarousel" data-slide-to="9"></li>
+      <li data-target="#myCarousel" data-slide-to="10"></li>
+      <li data-target="#myCarousel" data-slide-to="11></li>
+      <li data-target="#myCarousel" data-slide-to="12"></li>
+      <li data-target="#myCarousel" data-slide-to="13"></li>
+      <li data-target="#myCarousel" data-slide-to="14"></li>
+      <li data-target="#myCarousel" data-slide-to="15"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+
+<!--see-------------------------------Wonder 1(2 items)---------------------------------------------See-->
+
+
+
+
+    <div class="carousel-inner" role="listbox" >
+
+
+      <div class="item active">
+
+        <img src="IMAGES\Chichen_Itza.jpg" alt="Wonder 1" id="caro">
+
+        <div class="carousel-caption">
+
+          <h3>Wonder No. 1:   Chichen Itza, MEXICO</h3>
+          <p>Chichen Itza which means "At the mouth of the well of Itza" , is the 2nd most visited archeological site 
+of Mexico today,
+ an estimated 1.2 million tourists visit the ruins every year.</p>
+        </div>
+      </div>
+
+
+
+      <div class="item" >
+        <img src="IMAGES\chichen2.jpg" alt="Wonder 1" id="caro">
+        <div class="carousel-caption">
+          <h3>What a beautiful Night view</h3>
+          <p>Proudly standing The Chichen Itza which was a large pre-Columbian city built by the Maya people of the Terminal Classic. </p>
+        </div>
+      </div>
+    
+
+
+<!--see----------------------------------------Wonder 2(2 items)------------------------------------See-->
+
+
+      <div class="item">
+        <img src="IMAGES\Christ_the_redeemer.jpg" alt="Wonder 2" id="caro">
+        <div class="carousel-caption">
+          <h3>Wonder No 2:  Christ- The Redeemer, BRAZIL</h3>
+          <p>
+        Keeping a watchful eye over the people of Rio de Janeiro, the Statue of Christ the Redeemer (or Cristo Redentor) sits 
+        atop Corcovado 2,300 feet (700 meters) above the city. It was voted one of the New Seven Wonders of the World in 2007.</p>
+        </div>
+      </div>
+
+
+       <div class="item"> 
+        <img src="IMAGES\Christ-the-Redeemer2.jpg" alt="Wonder 2 " id="caro">
+        <div class="carousel-caption">
+          <h3>Christ.....Bless the entire world with your Glory</h3>
+          <p> The largest art deco statue in the world, it is 130 ft (39 m) tall and the arms measure 98 ft (30 m) across. 
+        Made of reinforced concrete and sandstone the statue was unveiled in 1931. </p>
+        </div>
+      </div>
+
+
+
+<!--see-----------------------------------Wonder 3(2 items)-----------------------------------------See-->
+
+
+
+
+ <div class="item">
+        <img src="IMAGES\Great_wall_of_China.jpg" alt="Wonder 3" id="caro" >
+        <div class="carousel-caption">
+          <h3>Wonder No 3: The Great Wall Of China, CHINA </h3>
+          <p>
+The Great Wall of China is one of the greatest sights in the world. The longest wall in the world,
+ it is an awe-inspiring feat of ancient defensive architecture.</p>
+        </div>
+      </div>
+
+ <div class="item">
+        <img src="IMAGES\Great2.jpg" alt="Wonder 3" id="caro">
+        <div class="carousel-caption">
+          <h3>The greatly extending wall</h3>
+   
+        </div>
+      </div>
+
+
+
+<!--see---------------------------------Wonder 4(2 items)-------------------------------------------See-->
+
+
+
+
+ <div class="item">
+        <img src="IMAGES\Machuu_Pichuu.jpg" alt="Wonder 4 " id="caro">
+        <div class="carousel-caption">
+          <h3>Wonder No 4: Machuu Pichuu, PERU </h3>
+          <p> This wonder of the World is a 15th-century Inca site located 2,430 metres (7,970 ft) above sea level.
+It is located in the Cusco Region, Urubamba Province, Machupicchu District in Peru.</p>
+        </div>
+      </div>
+
+
+ <div class="item">
+        <img src="IMAGES\Machuu2.jpg" alt="Wonder 4" id="caro">
+        <div class="carousel-caption">
+          <h3> What a view </h3>
+        </div>
+      </div>
+
+
+
+<!--see-------------------------------------Wonder 5(2 items)---------------------------------------See-->
+
+
+
+
+ <div class="item">
+        <img src="IMAGES\Petra.jpg" alt="Wonder 5 " id="caro">
+        <div class="carousel-caption">
+          <h3>Wonder No 5: Petra, JORDAN </h3>
+          <p> A historical and archaeological city in the southern Jordanian governorate of Maan that is famous for its rock-cut 
+architecture and water conduit system. </p>
+        </div>
+      </div>
+
+ <div class="item">
+        <img src="IMAGES\Petra2.jpg" alt="Wonder 5 " id="caro">
+        <div class="carousel-caption">
+          <h3>Glorious Petra's Night view.....With lights lit</h3> 
+        </div>
+      </div>
+
+
+
+<!--see----------------------------------Wonder 6  (3 items)------------------------------------------See-->
+
+
+
+
+
+ <div class="item">
+        <img src="IMAGES\Taj_Mahal.jpg" alt="Wonder 6 " id="caro">
+        <div class="carousel-caption">
+          <h3>Wonder No 6: The Taj Mahal, INDIA </h3>
+          <p> The Taj Mahal "crown of palaces", pronounced also "the Taj") is a white marble mausoleum located in Agra, Uttar Pradesh, India.
+                     </p>
+        </div>
+      </div>
+
+ <div class="item">
+        <img src="IMAGES\Taj_Mahal2.jpg" alt="Wonder 6 " id="caro">
+        <div class="carousel-caption">
+          <h3> Taj Mahal- An Epitome Of LOVE</h3> 
+<p> One of the world's most celebrated structures and a symbol of India's rich history. </p>
+        </div>
+      </div>
+
+
+ <div class="item">
+        <img src="IMAGES\Taj_Mahl3.jpg" alt="Wonder 6 " id="caro">
+        <div class="carousel-caption">
+          <h3> Taj Mahal- SYMBOL of India's Rich History</h3> 
+<p> The mausoleum is widely recognized as "The JEWEL of Muslim art in India " and is 
+One of the world's most celebrated structures and a symbol of India's rich history. </p>
+        </div>
+      </div>
+
+
+
+<!--see-----------------------------------Wonder 7 (3 items)-----------------------------------------See-->
+
+
+
+
+
+
+ <div class="item">
+        <img src="IMAGES\Colosseum.jpg" alt="Wonder 7" style="width: 570px; height: 350px;">
+        <div class="carousel-caption">
+          <h3>Wonder No 7: Colosseum, ITALY</h3>
+          <p>The Colosseum or Coliseum, also known as the Flavian Amphitheatre is an elliptical amphitheatre in the centre of the city of Rome, Italy.</p>
+        </div>
+      </div>
+
+ <div class="item">
+        <img src="IMAGES\Collo2.jpg" alt="Wonder 7" style="width: 570px; height: 350px;">
+        <div class="carousel-caption">
+          <h3> The beautiful sunset view  </h3>
+          <p>   
+ Built of concrete and stone, it was the largest amphitheatre of the Roman Empire, and 
+is considered one of the greatest works of Roman architecture and engineering  </p>
+        </div>
+      </div>
+
+
+ <div class="item">
+        <img src="IMAGES\Collo3.jpg" alt="Wonder 7" style="width: 570px; height: 350px;">
+        <div class="carousel-caption">
+          <h3>Amazing Moon view</h3>
+          <p>    It is the largest amphitheatre in the world.  </p>
+        </div>
+      </div>
+
+
+
+<!--see----------------------------------------------------------------------------See-->
+      
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+
+
+
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-sm-12">
+
+ 
+
+
+
+</div>
+</div>
+
+ 
+
+</div>
+
+</div>
+
+<div id="footer" style="background-color: aquamarine; margin-top: 2%; word-spacing: 24px;">
+<div class="container">
+
+  <footer style=" width: auto;
+height: 60px;
+overflow: hidden;
+padding: 0;
+color: #fff;
+
+padding-top: 2%;
+margin-right: -1%;
+">
+   <p>
+    
+   
+   <span class="pull-right" style="position: relative; top: -2px;">
+
+  <b> <a href="feedback.html" class="twitter-follow-button" data-width="80px" data-show-count="false" data-show-screen-name="false">Feedback</a> </b> 
+    
+	<b> <a href="#" class="twitter-follow-button" data-width="80px" data-show-count="false" data-show-screen-name="false">Rate US</a></b>
+   
+
+
+
+
+</span>
+   
+	
+	
+	
+	
+	</p>
+    </footer>
+     </div>
+  </div>			
+
+</body>
+</html>
